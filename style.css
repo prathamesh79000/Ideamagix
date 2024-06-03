@@ -7,14 +7,106 @@ body {
 
 header {
   background-color: #296e9f;
-  padding: 10px 0;
   text-align: center;
-  /* height: 50px; */
 }
+
+.top-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 20px;
+}
+
+.top-content span{
+    font-weight: lighter;
+}
+
+.top-content h6{
+    font-weight: 600;
+}
+
+.text-img-container {
+    display: flex;
+    align-items: center;
+}
+
+.text-container{
+    margin-right: 10px;
+    text-align: left;
+}
+
+.text-container h6{
+    margin: 5px;
+}
+
+/* Styling for country dropdown */
+
+.country-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.selected-country {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.selected-country img {
+    width: 20px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+.selected-country .arrow {
+    margin-left: 10px;
+}
+
+.country-dropdown select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    background-color: transparent;
+    /* To make the dropdown background transparent */
+    border: none;
+    /* To remove the border */
+    appearance: none;
+    /* To remove the default arrow */
+}
+
+.country-dropdown select option {
+    border: none;
+    padding: 0;
+}
+
+.country-dropdown select option {
+    background-repeat: no-repeat;
+    background-size: 20px;
+    /* Adjust the size of the flag */
+    background-position: 5px center;
+    /* Adjust the position of the flag within the option */
+    padding-left: 30px;
+    /* Space for the flag */
+}
+
+
 .container {
   width: 90%;
   margin: 0 auto;
 }
+
+.header-container{
+    color: white;
+    margin-right: 10px;
+}
+
 .section-background{
     height: 50vh;
     width: 100%;
@@ -26,7 +118,7 @@ header {
     background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
-.container-2{
+.sub-container{
   display:flex;
   flex-direction: column;
   padding: 70px;
@@ -36,16 +128,8 @@ header {
   color: #efefef; /* Set the default text color */
 }
 
-.container-2 > div> span {
+.sub-container > div > span {
   color:red
-}
-
-header.container-owl{
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-header.container-owl a {
-    color: rgb(0, 0, 0); /* Text color of the links in the second navbar */
 }
 
 .button {
@@ -70,6 +154,15 @@ header.container-owl a {
   -webkit-user-select: none;
   touch-action: manipulation;
   width: fit-content;
+}
+
+.container-owl{
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-owl a {
+    color: rgb(0, 0, 0);
 }
 
 .section-detail {
@@ -97,6 +190,19 @@ header.container-owl a {
     font-size: 16px;
     line-height: 1.6;
 }
+
+.image {
+    flex: 1;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+}
+
 .card {
     position: sticky;
     top: 20px;
@@ -143,20 +249,46 @@ header.container-owl a {
 .card input[type="submit"]:hover {
     background-color: #45a049;
 }
+
 .card-container {
     display: flex; /* Set display to flex for the card container */
     justify-content: space-between; /* Distribute cards evenly */
     margin: auto; /* Add margin to the card container */
 }
-.image {
-    flex: 1;
-    padding: 20px;
+
+/* faq */
+
+.text hr {
+    margin: 20px 0;
 }
-.image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px; 
+
+.faq-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.faq-item .toggle-faq {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 10px;
+}
+
+.faq-item .faq-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.extra-content {
+    display: none;
+    margin-left: 0;
+}
+
+.extra-content p {
+    margin: 0;
 }
 
 .section-hospital{
@@ -252,7 +384,6 @@ nav {
 }
 
 
-
 nav a {
     color: white;
     margin-right: 10px;
@@ -272,8 +403,6 @@ nav input[type="text"] {
     background-size: 1rem; /* Adjust the size of the icon */
     background-color: #5cadd2;
 }
-
-/* CSS */
 
 
 .button:disabled {

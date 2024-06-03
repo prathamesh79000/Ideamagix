@@ -5,38 +5,89 @@
     <title>Demo Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
 
     <!-- Add Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
     <!-- Add jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Add Owl Carousel JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Country Dropdown -->
+    <script src="dropdown.js"></script>
+    <!-- Toggle FAQs -->
+    <script src="faqs.js"></script>
 
 </head>
 
 <body>
+
+    <header style="background-color: white;">
+        <div class="top-content" style="background-color: white;">
+            <div>
+                <img src="public/logo-white.png" alt="">
+            </div>
+            <div>
+                <img src="public/doc-logo.png" alt="" style="width: 50px; height: 50px;">
+            </div>
+            <div class="text-img-container">
+                <img src="public/consultant.png" alt="" style="width: 35px; height: 35px;">
+                <div class="text-container">
+                    <h6><span>Second Medical Opinion</span></h6>
+                    <h6>Book Consultation</h6>
+                </div>
+            </div>
+            <div class="text-img-container">
+                <img src="public/call.png" alt="" style="width: 35px; height: 35px;">
+                <div class="text-container">
+                    <h6><span>Call us on</span></h6>
+                    <h6>XXX XXX XXXX</h6>
+                </div>
+            </div>
+            <div class="text-img-container">
+                <img src="public/email.png" alt="" style="width: 35px; height: 35px;">
+                <div class="text-container">
+                    <h6><span>Email us on</span></h6>
+                    <h6>info@mediretreats.com</h6>
+                </div>
+            </div>
+            <div class="country-dropdown">
+                <div class="selected-country" id="selected-country">
+                    <img src="public/india.png" id="selected-flag" alt="Selected Country Flag">
+                    <span class="arrow">&#9662;</span>
+                </div>
+                <select id="country" name="country">
+                    <option value="in" data-flag="public/india.png">India</option>
+                    <option value="us" data-flag="public/usa.png">United States</option>
+                    <option value="ca" data-flag="public/canada.png">Canada</option>
+                    <option value="uk" data-flag="public/uk.png">United Kingdom</option>
+                    <option value="de" data-flag="public/germany.png">Germany</option>
+                    <option value="fr" data-flag="public/france.png">France</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
     <header>
         <div class="container">
-            <nav>
-                <a href="#" style="color: white; margin-right: 10px;">Home</a>
-                <a href="#" style="color: white; margin-right: 10px;">About Us</a>
-                <a href="#" style="color: white; margin-right: 10px;">Treatments +</a>
-                <a href="#" style="color: white; margin-right: 10px;">Destinations +</a>
-                <a href="#" style="color: white; margin-right: 10px;">Hospitals</a>
-                <a href="#" style="color: white; margin-right: 10px;">FAQs</a>
-                <a href="#" style="color: white; margin-right: 10px;">Blog</a>
-                <a href="#" style="color: white; margin-right: 10px;">Request a Quote</a>
+            <nav class="header-container">
+                <a href="#">About Us</a>
+                <a href="#">Treatments +</a>
+                <a href="#">Destinations +</a>
+                <a href="#">Home</a>
+                <a href="#">Hospitals</a>
+                <a href="#">FAQs</a>
+                <a href="#">Blog</a>
+                <a href="#">Request a Quote</a>
                 <input type="text" placeholder="Search...">
             </nav>
         </div>
     </header>
+
     <section class="section-background">
-        <div class="container-2">
+        <div class="sub-container">
             <div>Home <span>&gt;</span> Treatments <span>&gt;</span> Orthopaedics <span>&gt;</span> Knee Replacement
             </div>
             <h1> Total Knee Replacement</h1>
@@ -47,9 +98,9 @@
             </button>
         </div>
     </section>
+
     <header class="container-owl">
         <div class="container">
-
             <nav id="owl-nav">
                 <a href="#overview">Overview</a>
                 <a href="#eligibility">Eligibility</a>
@@ -62,9 +113,6 @@
             </nav>
         </div>
     </header>
-
-
-
 
     <section id="overview" class="section-detail">
         <div class="text">
@@ -79,13 +127,13 @@
         </div>
         <div class="image">
             <img src="https://img.freepik.com/premium-photo/doctor-consulting-patient-with-digital-tablet-discussing-diagnosis-medical-checkup-hospital-healthcare-worker-trusted-physician-appointment-with-medicine-advice-wellness-feedback_590464-79318.jpg"
-                alt="Placeholder Image">
+                alt="knee banner">
         </div>
     </section>
-    <hr class="section-divider" style="border-top: dotted 3px; width: 62%; margin-left: 80px;" />
 
+    <hr style="border-top: dotted 3px; width: 87%;" />
 
-    <section id="eligibility" class="section-detail ">
+    <section id="eligibility" class="section-detail">
         <div class="text">
             <h1>Eligibility For Treatment</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus
@@ -100,7 +148,7 @@
                 <li>You are willing to make permanent changes in the lifestyle</li>
             </ul>
         </div>
-        <div class="card ">
+        <div class="card">
             <form action="#" method="post">
                 <h2 style="font-family: 'Brush Script MT', cursive; font-size: 36px; color: #39a4da;">Need Help?
                 </h2>
@@ -113,8 +161,8 @@
             </form>
         </div>
     </section>
-    <hr class="section-divider" style="border-top: dotted 3px; width: 62%; margin-left: 80px;" />
 
+    <hr style="border-top: dotted 3px; width: 56%; margin-left: 80px;" />
 
     <section id="preparation" class="section-detail">
         <div class="text">
@@ -132,9 +180,9 @@
                 <li>You are willing to make permanent changes in the lifestyle</li>
             </ul>
         </div>
-
     </section>
-    <hr style="border-top: dotted 3px; width: 62%; margin-left: 80px;" />
+
+    <hr style="border-top: dotted 3px; width: 56%; margin-left: 80px;" />
 
     <section id="about-treatment" class="section-detail">
         <div class="text">
@@ -153,8 +201,8 @@
             </ul>
         </div>
     </section>
-    <hr class="section-divider" style="border-top: dotted 3px; width: 62%; margin-left: 80px;" />
 
+    <hr style="border-top: dotted 3px; width: 56%; margin-left: 80px;" />
 
     <section id="post-treatment-care" class="section-detail">
         <div class="text">
@@ -173,7 +221,8 @@
             </ul>
         </div>
     </section>
-    <hr class="section-divider" style="border-top: dotted 3px; width: 62%; margin-left: 80px;" />
+
+    <hr style="border-top: dotted 3px; width: 56%; margin-left: 80px;" />
 
     <section id="recovery-tips" class="section-detail">
         <div class="text">
@@ -192,22 +241,20 @@
             </ul>
         </div>
     </section>
-    <hr class="section-divider" style="border-top: dotted 3px; width: 62%; margin-left: 80px;" />
 
+    <hr style="border-top: dotted 3px; width: 56%; margin-left: 80px;" />
 
     <section id="faqs" class="section-detail">
         <div class="text">
             <h1>Treatment FAQs.</h1>
-            <hr class="section-divider" />
-            <p>
-                <a href="#" class="toggle-faq"
-                    style="text-decoration: none; color: inherit; display: inline-block; vertical-align: middle;">
-                    <img src="public/add.png" alt="+" style="width: 25px; height: 25px; margin-right: 10px;">
+            <hr />
+            <div class="faq-item">
+                <a href="#" class="toggle-faq">
+                    <img src="public/add.png" alt="+" class="faq-icon">
                 </a>
-                <span style="display: inline-block; vertical-align: middle;">How do I know the clinic I am searching is
-                    verified?</span>
-            </p>
-            <div class="extra-content" style="display: none;">
+                <span>How do I know the clinic I am searching is verified?</span>
+            </div>
+            <div class="extra-content">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum suscipit tenetur rerum maiores
                     excepturi
                     impedit, expedita vitae optio sequi iste nulla soluta. Ipsa obcaecati quos perferendis rerum
@@ -215,64 +262,53 @@
                     adipisci, itaque sequi fuga, facere impedit beatae! Aliquam architecto a, id, similique dicta nulla
                     nostrum dolore sed doloribus nisi distinctio quia deserunt?</p>
             </div>
-            <hr class="section-divider" />
-
-            <p>
-                <a href="#" class="toggle-faq"
-                    style="text-decoration: none; color: inherit; display: inline-block; vertical-align: middle;">
-                    <img src="public/add.png" alt="+" style="width: 25px; height: 25px; margin-right: 10px;">
+            <hr />
+            <div class="faq-item">
+                <a href="#" class="toggle-faq">
+                    <img src="public/add.png" alt="+" class="faq-icon">
                 </a>
-                <span style="display: inline-block; vertical-align: middle;">I can't travel alone so can some family
-                    member or friend of mine accompany me?</span>
-            </p>
-            <div class="extra-content" style="display: none;">
+                <span>I can't travel alone so can some family member or friend of mine accompany me?</span>
+            </div>
+            <div class="extra-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum suscipit tenetur rerum maiores excepturi
                     impedit, expedita vitae optio sequi iste nulla soluta. Ipsa obcaecati quos perferendis rerum
                     molestiae
                     adipisci, itaque sequi fuga, facere impedit beatae! Aliquam architecto a, id, similique dicta nulla
                     nostrum dolore sed doloribus nisi distinctio quia deserunt?</p>
             </div>
-            <hr class="section-divider" />
-
-            <p>
-                <a href="#" class="toggle-faq"
-                    style="text-decoration: none; color: inherit; display: inline-block; vertical-align: middle;">
-                    <img src="public/add.png" alt="+" style="width: 25px; height: 25px; margin-right: 10px;">
+            <hr />
+            <div class="faq-item">
+                <a href="#" class="toggle-faq">
+                    <img src="public/add.png" alt="+" class="faq-icon">
                 </a>
-                <span style="display: inline-block; vertical-align: middle;">How do I know the clinic I am searching is
-                    verified?</span>
-            </p>
-            <div class="extra-content" style="display: none;">
+                <span>How do I know the clinic I am searching is verified?</span>
+            </div>
+            <div class="extra-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum suscipit tenetur rerum maiores excepturi
                     impedit, expedita vitae optio sequi iste nulla soluta. Ipsa obcaecati quos perferendis rerum
                     molestiae
                     adipisci, itaque sequi fuga, facere impedit beatae! Aliquam architecto a, id, similique dicta nulla
                     nostrum dolore sed doloribus nisi distinctio quia deserunt?</p>
             </div>
-            <hr class="section-divider" />
-
-            <p>
-                <a href="#" class="toggle-faq"
-                    style="text-decoration: none; color: inherit; display: inline-block; vertical-align: middle;">
-                    <img src="public/add.png" alt="+" style="width: 25px; height: 25px; margin-right: 10px;">
+            <hr />
+            <div class="faq-item">
+                <a href="#" class="toggle-faq">
+                    <img src="public/add.png" alt="+" class="faq-icon">
                 </a>
-                <span style="display: inline-block; vertical-align: middle;">How do I share my reports and medical cases
-                    with the clinic of my choice?
-                </span>
-            </p>
-            <div class="extra-content" style="display: none;">
+                <span>How do I share my reports and medical cases with the clinic of my choice?</span>
+            </div>
+            <div class="extra-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum suscipit tenetur rerum maiores excepturi
                     impedit, expedita vitae optio sequi iste nulla soluta. Ipsa obcaecati quos perferendis rerum
                     molestiae
                     adipisci, itaque sequi fuga, facere impedit beatae! Aliquam architecto a, id, similique dicta nulla
                     nostrum dolore sed doloribus nisi distinctio quia deserunt?</p>
             </div>
-            <hr class="section-divider" />
-
+            <hr />
         </div>
     </section>
-    <hr class="section-divider" style="border-top: dotted 3px; width: 62%; margin-left: 80px;" />
 
+    <hr style="border-top: dotted 3px; width: 56%; margin-left: 80px;" />
 
     <section id="patient-stories" class="section-detail">
         <div class="text">
@@ -696,32 +732,6 @@
                     scrollTop: $(target).offset().top
                 }, 800);
             }
-        });
-    </script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var toggleButtons = document.querySelectorAll('.toggle-faq');
-
-            toggleButtons.forEach(function (button) {
-                button.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    var content = this.parentElement.nextElementSibling;
-                    var icon = this.querySelector('img');
-
-                    if (content.style.display === 'none' || content.style.display === '') {
-                        content.style.display = 'block';
-                        content.style.marginLeft = '50px';
-                        content.style.marginRight = '150px';
-                        icon.src = 'public/minus.png';
-                    } else {
-                        content.style.display = 'none';
-                        content.style.marginLeft = '0';
-                        icon.src = 'public/add.png';
-                    }
-                });
-            });
         });
     </script>
 
