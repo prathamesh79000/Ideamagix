@@ -8,7 +8,840 @@ body {
 header {
   background-color: #296e9f;
   text-align: center;
+}body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+header {
+  background-color: #296e9f;
+  text-align: center;
+}
+
+.top-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 20px;
+}
+
+.top-content span{
+    font-weight: lighter;
+}
+
+.top-content h6{
+    font-weight: 600;
+}
+
+.text-img-container {
+    display: flex;
+    align-items: center;
+}
+
+.text-container{
+    margin-right: 10px;
+    text-align: left;
+}
+
+.text-container h6{
+    margin: 5px;
+}
+
+/* Styling for country dropdown */
+
+.country-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.selected-country {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.selected-country img {
+    width: 20px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+.selected-country .arrow {
+    margin-left: 10px;
+}
+
+.country-dropdown select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    background-color: transparent;
+    /* To make the dropdown background transparent */
+    border: none;
+    /* To remove the border */
+    appearance: none;
+    /* To remove the default arrow */
+}
+
+.country-dropdown select option {
+    border: none;
+    padding: 0;
+}
+
+.country-dropdown select option {
+    background-repeat: no-repeat;
+    background-size: 20px;
+    /* Adjust the size of the flag */
+    background-position: 5px center;
+    /* Adjust the position of the flag within the option */
+    padding-left: 30px;
+    /* Space for the flag */
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-container{
+    color: white;
+    margin-right: 10px;
+}
+
+.section-background{
+    height: 50vh;
+    width: 100%;
+    background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+    url('https://waortho.com/wp-content/uploads/2021/10/person-suffering-from-knee-pain-digital-bone-human-foot-injury-caused-by-tendon-problems.jpg');
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+.sub-container{
+  display:flex;
+  flex-direction: column;
+  padding: 70px;
+  text-align: left;
+  font-weight: 500;
+  width:50%;
+  color: #efefef; /* Set the default text color */
+}
+
+.sub-container > div > span {
+  color:red
+}
+
+.button {
+  appearance: button;
+  background-color: #1652F0;
+  border: 1px solid #1652F0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Graphik,-apple-system,system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 500;
+  overflow: visible;
+  padding: 12px 16px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+}
+
+.container-owl{
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-owl a {
+    color: rgb(0, 0, 0);
+}
+
+.section-detail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+    min-height: 500px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.section-detail:nth-of-type(n+4) {
+    margin-right: 470px; /* Adjust this value as needed */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.image {
+    flex: 1;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+}
+
+.card {
+    position: sticky;
+    top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="tel"],
+.card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.card textarea {
+    height: 100px;
+}
+
+.card input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.card input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.card-container {
+    display: flex; /* Set display to flex for the card container */
+    justify-content: space-between; /* Distribute cards evenly */
+    margin: auto; /* Add margin to the card container */
+}
+
+/* dot navigation */
+
+
+.patient-stories{
+    margin-right: 50px;
+}
+
+/* faq */
+
+.text hr {
+    margin: 20px 0;
+}
+
+.faq-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.faq-item .toggle-faq {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 10px;
+}
+
+.faq-item .faq-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.content-faq {
+    display: none;
+    margin-left: 0;
+}
+
+.content-faq p {
+    margin: 0;
+}
+
+.card-userstory {
+    width: 270px; 
+    height: 300px; 
+    overflow: hidden; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: inline-block;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-userstory p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 14px; 
+    line-height: 1.5;
+}
+
+.card-userstory h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px; 
+    line-height: 1.5;
+}
+
+.card-userstory img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-wrapper {
+    flex: 1;
+    overflow-y: auto; 
+    padding: 0 5px; 
+    margin-right: 10px;
+    /* margin: 0px; */
+    max-width: 400px;
+    box-sizing: border-box;
+
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    gap: 10px; 
+    padding: 0 10px; 
+    margin-right: 10px;
+}
+
+.card-content {
+    flex-grow: 1;
+    height: 340px;
+    overflow: hidden;
+}
+
+.avatar {
+    display: flex;
+    align-items: center; 
+}
+
+.avatar-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.avatar img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border-radius: 50%;
+}
+
+.avatar-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.avatar-text p {
+    font-weight: bold;
+    font-size: 12px; 
+    margin: 0; 
+}
+
+.avatar-text span {
+    font-size: 10px; 
+    color: #666; 
+}
+
+.section-hospital{
+    text-align: center;
+    line-height: 20%;
+    width: 100%;
+    height: 500px;
+}
+
+.section-hospital h5{
+    color: red;
+    font-size: 20px;
+    font-weight:100px;
+}
+
+.section-hospital .hospital-cards .card-hospital {
+    margin-left: 70px; /* Adjust margin as needed */
+}
+
+.section-hospital h1 span{
+    color: rgb(71, 188, 227);
+    font-weight: lighter;
+
+}
+
+
+/* doc card */
+.section-doc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9F2F6;
+    height: 73vh;
+    margin-bottom: 100px;
+
+}
+.container-doc-card {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.section-doc h5{
+    color: red;
+    font-size: 20px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.section-doc h1 span{
+    color: rgb(71, 188, 227);
+    font-weight: lighter;
+    padding: 0px;
+}
+
+
+.card-container-doc-card {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card-container-doc-card h1{
+    margin-top: 0px;
+}
+
+.doc-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-placeholder {
+    background-color: #f9c8c8;
+    height: 220px;
+    margin-bottom: 15px;
+}
+
+.doctor-name {
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 0;
+}
+
+.location, .qualification {
+    color: #2c3e50;
+    margin: 5px 0;
+}
+
+/* Hospital */
+.section-hospital{
+    text-align: center;
+    line-height: 20%;
+    width: 100%;
+    height: 500px;
+}
+
+.section-hospital h5{
+    color: red;
+    font-size: 20px;
+    font-weight:100px;
+}
+.section-hospital .hospital-cards .card-hospital {
+    margin-left: 70px; /* Adjust margin as needed */
+}
+
+.section-hospital h1 span{
+    color: rgb(71, 188, 227);
+    font-weight: lighter;
+
+}
+
+.owl-carousel .owl-item {
+    width: 250px; 
+}
+
+@media (max-width: 768px) {
+.container {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.text,
+.image {
+    flex: none;
+    width: 100%;
+}
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none; /* Remove underline from links */
+    line-height: 2rem; /* Set the line-height to control the height */
+    display: inline-block; /* Ensure the height applies to the links */
+}
+
+nav input[type="text"] {
+    height: 100%; /* Take up the entire height of the nav bar */
+    line-height: 2rem; /* Match the line-height of the nav bar */
+    padding: 0.5rem;
+    padding-left: 1.5rem; /* Adjusted padding for the left */
+    border: none;
+    border-radius: 5px;
+    background: url('https://img.icons8.com/ios-filled/50/000000/search--v1.png') no-repeat 0.5rem center; /* Shifted icon to the left */
+    background-size: 1rem; /* Adjust the size of the icon */
+    background-color: #5cadd2;
+}
+
+
+.button:disabled {
+  opacity: .5;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:hover {
+  background-color: #0A46E4;
+  border-color: #0A46E4;
+}
+
+.button:active {
+  background-color: #0039D7;
+  border-color: #0039D7;
+}
+
+
+
+.cards-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px; /* Reduced gap between cards */
+    flex-wrap: wrap; /* This allows the cards to wrap if the screen size is too small */
+}
+
+.card-hospital {
+    width: 350px; /* Fixed width for each card */
+    height: 350px; /* Fixed height for each card */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadows to create the "card" effect */
+    transition: 0.3s;
+    overflow: hidden; /* Hide any content overflowing from the card */
+    position: relative; 
+    border: 2px dotted rgb(255, 88, 88);
+}
+
+.card-hospital img {
+    width: 100%; /* Take up the entire width of the card */
+    height: 100%; /* Take up the entire height of the card */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+}
+.card-hospital p {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.card-hospital i {
+    color: red;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.card-hospital p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.card-hospital:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Deeper shadow on mouse-over */
+}
+
+.card-container-hospital {
+    padding: 10px 16px; /* Add some padding inside the card container */
+    background-color: white; /* Add a background color to make text readable over image */
+    position: absolute; /* Position it absolutely */
+    bottom: 0; /* Stick it to the bottom */
+    width: 100%; /* Take the full width of the card */
+    box-sizing: border-box; /* Ensure padding doesn't add to the width */
+}
+
+.hospital-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin-left: 0 0 10px 10px;
+}
+.owl-carousel{
+    display: flex;
+    align-items: center;
+}
+
+.owl-carousel .owl-stage .owl-item {
+     margin-right: 20px;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.owl-dot.active {
+    background: #000;
+}
+
+
+.section-background2{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+    url('https://images.unsplash.com/photo-1495592528496-a143a67931d6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+    height: 40px; /* Adjust height as needed */
+    width: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 10px; /* Adjust margin as needed */
+}
+.section-background2 h1 {
+    margin-bottom: 15px;
+    margin-top: 5px; /* Adjust margin as needed */
+}
+
+.section-background2 h4 {
+    margin-top: 50px; /* Adjust margin as needed */
+}
+
+.sub-image {
+    position: absolute;
+    top: 50%; /* Adjust vertical position */
+    transform: translateY(-50%); /* Center vertically */
+    right: 10px;
+    width: 50px;
+    height: auto;
+    z-index: 2;
+}
+.ul-links{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+.ul-links h5{
+    font-size: 16px;
+}
+.ul-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+.ul-links ul li a {
+    text-decoration: none;
+    color: white;
+        transition: color 0.2s; /* Add smooth transition */
+}
+
+
+.ul-links ul li a:hover {
+    color: blue; /* Change text color on hover */
+}
+.ul-links ul li::before {
+    content: "-";
+    margin-right: 8px;
+    line-height: 1.5;
+}
+.horizontal-line {
+    border: none;
+    border-top: 1px solid white;
+    width: 85%;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+.company-logo{
+    width: 100%;
+    height:100px;
+}
+.add-user-box{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.logo{
+    width: 20px;
+    height: 20px;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0C2332;
+    color: white;
+    align-items: center;
+
+}
+.footer-subcontent{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.contact-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-links span{
+    color: rgb(71, 188, 227);
+    font-weight: bold;
+}
+.about-content{
+    /* padding-left: 170px;
+    padding-right: 170px; */
+    margin: 0 10px;
+    width: 50%;
+}
+.card-add-user{
+    margin-top: -100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.end-footer{
+    background-color: #5cadd2;
+}
+.end-footer-content{
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.end-footer-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.end-footer-2 p a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    transition: color 0.2s; /* Add smooth transition */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.end-footer-2 p a:hover {
+    color: blue; /* Change color on hover */
+}
+
+
 
 .top-content{
     display: flex;
@@ -282,37 +1115,15 @@ header {
     margin-right: 10px;
 }
 
-.extra-content {
+.content-faq {
     display: none;
     margin-left: 0;
 }
 
-.extra-content p {
+.content-faq p {
     margin: 0;
 }
 
-.section-hospital{
-    text-align: center;
-    line-height: 20%;
-    width: 100%;
-    height: 500px;
-}
-
-.section-hospital h5{
-    color: red;
-    font-size: 20px;
-    font-weight:100px;
-}
-.section-hospital .hospital-cards .card-hospital {
-    margin-left: 70px; /* Adjust margin as needed */
-}
-
-
-.section-hospital h1 span{
-    color: rgb(71, 188, 227);
-    font-weight: lighter;
-
-}
 .card-userstory {
     width: 270px; 
     height: 300px; 
@@ -362,6 +1173,113 @@ header {
     border-radius: 4px;
 }
 
+.section-hospital{
+    text-align: center;
+    line-height: 20%;
+    width: 100%;
+    height: 500px;
+}
+
+.section-hospital h5{
+    color: red;
+    font-size: 20px;
+    font-weight:100px;
+}
+
+.section-hospital .hospital-cards .card-hospital {
+    margin-left: 70px; /* Adjust margin as needed */
+}
+
+.section-hospital h1 span{
+    color: rgb(71, 188, 227);
+    font-weight: lighter;
+
+}
+
+
+/* doc card */
+.section-doc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cef9ff;
+    height: 60vh;
+
+}
+.container-doc-card {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.section-doc h5{
+    color: red;
+    font-size: 20px;
+    font-weight:100px;
+    padding: 0px;
+}
+
+.section-doc h1 span{
+    color: rgb(71, 188, 227);
+    font-weight: lighter;
+    padding: 0px;
+}
+.card-container-doc-card {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.doc-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-placeholder {
+    background-color: #f9c8c8;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.doctor-name {
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 0;
+}
+
+.location, .qualification {
+    color: #2c3e50;
+    margin: 5px 0;
+}
+
+/* Hospital */
+.section-hospital{
+    text-align: center;
+    line-height: 20%;
+    width: 100%;
+    height: 500px;
+}
+
+.section-hospital h5{
+    color: red;
+    font-size: 20px;
+    font-weight:100px;
+}
+.section-hospital .hospital-cards .card-hospital {
+    margin-left: 70px; /* Adjust margin as needed */
+}
+
+.section-hospital h1 span{
+    color: rgb(71, 188, 227);
+    font-weight: lighter;
+
+}
+
+.owl-carousel .owl-item {
+    width: 250px; /* Adjust the width of the cards as needed */
+}
 
 @media (max-width: 768px) {
 .container {
@@ -423,8 +1341,6 @@ nav input[type="text"] {
   border-color: #0039D7;
 }
 
-
-
 .section-detail:nth-of-type(n+4) {
     margin-right: 350px; /* Adjust this value as needed */
 }
@@ -461,16 +1377,6 @@ nav input[type="text"] {
 }
 .card-container .card-wrapper {
     margin-right: 10px; 
-}
-
-#blue-slider {
-    position: absolute;
-    bottom: 0;
-    height: 4px;
-    background-color: blue;
-    transition: transform 0.3s ease;
-    width: 100px; /* Adjust width as needed */
-    left: 0; /* Start position at the first navigation item */
 }
 
 
@@ -722,64 +1628,3 @@ nav input[type="text"] {
     color: blue; /* Change color on hover */
 }
 
-/* doc card */
-.section-doc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #cef9ff;
-    height: 60vh;
-
-}
-.container-doc-card {
-    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.section-doc h5{
-    color: red;
-    font-size: 20px;
-    font-weight:100px;
-    padding: 0px;
-}
-
-.section-doc h1 span{
-    color: rgb(71, 188, 227);
-    font-weight: lighter;
-        padding: 0px;
-
-
-}
-.card-container-doc-card {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.doc-card {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.image-placeholder {
-    background-color: #f9c8c8;
-    height: 150px;
-    margin-bottom: 15px;
-}
-
-.doctor-name {
-    color: #e74c3c;
-    font-weight: bold;
-    margin: 0;
-}
-
-.location, .qualification {
-    color: #2c3e50;
-    margin: 5px 0;
-}
-.owl-carousel .owl-item {
-    width: 250px; /* Adjust the width of the cards as needed */
-}
