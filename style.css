@@ -630,6 +630,7 @@ nav input[type="text"] {
     box-sizing: border-box; /* Ensure padding doesn't add to the width */
 }
 
+
 .hospital-cards{
     display: flex;
     align-items: center;
